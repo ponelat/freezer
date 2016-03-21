@@ -132,7 +132,7 @@ var nodeCreator = {
 
 				if( filtered.length )
 					return this.__.store.notify( 'remove', this, filtered );
-				return this;
+				return Utils.findPivot( this ) || this;
 			}
 		}, commonMethods));
 
