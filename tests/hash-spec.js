@@ -144,6 +144,13 @@ describe("Freezer hash test", function(){
 		assert.equal( updated, data );
 	});
 
+	it( "Removing a non-existent element should still respect a pivot", function(){
+		var chained = data.pivot().b.remove('not-here');
+
+		var updated = freezer.getData();
+		assert.equal( chained, updated );
+	});
+
 	it( "Add an null key should work", function(){
 		var chained = data.set({u: null});
 

@@ -132,6 +132,7 @@ var nodeCreator = {
 
 				if( filtered.length )
 					return this.__.store.notify( 'remove', this, filtered );
+
 				return Utils.findPivot( this ) || this;
 			}
 		}, commonMethods));
